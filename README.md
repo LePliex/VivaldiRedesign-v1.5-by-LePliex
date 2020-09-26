@@ -1,7 +1,9 @@
 # VivaldiRedesign-alpha-v1-by-LePliex
-// Hello guys, I made a CSS design for Vivaldi. I try to design with the CSS file the browser so possible modern. If you have suggestions, then write it in the comments.
-// Have fun with the product.
+Hello guys, I made a CSS design for Vivaldi. I try to design with the CSS file the browser so possible modern. If you have suggestions, then write it in the comments.
 
-// What didn't work?
-// - Bookmarks
-// - Videos are buggy at full screen Mode.
+Have fun with the product.
+
+What didn't work?
+ 
+Bookmarks
+Videos are buggy at full screen Mode.
