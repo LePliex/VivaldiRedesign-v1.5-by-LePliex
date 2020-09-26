@@ -5,5 +5,6 @@ Have fun with the product.
 
 What didn't work?
  
-Bookmarks
-Videos are buggy at full screen Mode.
+-Bookmarks
+
+-Videos are buggy at full screen Mode.
