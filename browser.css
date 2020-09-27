@@ -232,6 +232,14 @@ div.dial-columns {
     background-color: transparent;
     border: none;
 }
+.startpage .startpage-drawer section.drawer-suggestions .dial-suggestions {
+  padding-bottom: 12px;
+  padding-top: 6px;
+  top: -38px;
+  left: 0px;
+  transform: scale(0.8);
+  align-items: unset;
+}
 .speeddial .dial.add .thumbnail-image svg.add-speeddial-large-plus {
   align-self: center;
   fill: var(--colorHighlightBg);
@@ -300,9 +308,11 @@ div.button-popup-wrapper {
 div.internal.webpageview {
  margin: 38px 0px !important;
 }
+/*
 div.active.visible.webpageview.pagefocusstop {
   margin: 38px 0px !important;
 }
+*/
 #webview-container {
   display: contents;
 }
@@ -410,6 +420,13 @@ h1 {
   z-index: 0;
   background: #171b1f;
 }
+#main > .inner {
+  display: flex;
+  flex: 1 1 0;
+  position: unset;
+  overflow: hidden;
+  padding: 39px 0px;
+}
 .address-top .toolbar-mainbar:after {
   visibility: hidden;
 }
@@ -449,4 +466,88 @@ div.toolbar.toolbar-default.toolbar-wrap > select  {
 }
 button.button-toolbar.home {
   border: none;
+}
+div.button-toolbar:nth-child(1) > button {
+  border: none;
+  background: none;
+}
+div.button-toolbar:nth-child(3) > button {  
+  border: none;
+  background: none;
+}
+div.button-toolbar:nth-child(4) > button {
+  border: none;
+  background: none;
+}
+div.button-toolbar:nth-child(2) > button {  
+  border: none;
+  background: none;
+}
+div.button-toolbar:nth-child(3) > button:hover {  
+  border-radius: 20px;
+}
+div.button-toolbar:nth-child(2) > button:hover {  
+  border-radius: 20px;
+}
+
+div.button-toolbar:nth-child(3) > button:hover {  
+  background: #0ec7ff;
+  animation: blueani .8s;
+}
+div.button-toolbar:nth-child(2) > button:hover {  
+  background: #0ec7ff;
+  animation: blueani .8s;
+}
+@keyframes blueani {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+.toolbar-default .button-toolbar > button:hover {
+  border-radius: 20px;
+  background: #0ec7ff;
+  animation: blueani .8s;
+}
+.addwebpanel-wrapper button:hover {
+  background: #0ec7ff;
+  animation: blueani .8s;
+}
+div.omni-clickable.OmniLinkItem.OmniLinkItem--Highlighted.OmniLinkItem--SingleValue {
+  background-color: #0ec7ff;
+}
+div.omni-clickable.OmniLinkItem.OmniLinkItem--Highlighted.OmniLinkItem {
+  background-color: #0ec7ff;
+}
+.mosaic-tile {
+  margin:  39px 0px;
+}
+
+.mosaic-tile:focus-within {
+  bottom: 3.6% !important;
+  margin: 39px 0px !important;
+}
+.button-popup-arrow--above:before {
+  visibility: hidden;
+}
+.HUD {
+  border-radius: 20px;
+}
+#browser.break-mode .bookmarkbarItem {
+  visibility: hidden;
+}
+.bookmark-bar-top .bookmark-bar {
+  border-bottom: none;
+}
+.webpageview.internal.visible .internal-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.mosaic-root {
+  margin: -39px 0px;
+}
+.mosaic-root:focus-within {
+  margin-bottom: -75px;
 }
