@@ -519,7 +519,8 @@ div.omni-clickable.OmniLinkItem.OmniLinkItem--Highlighted.OmniLinkItem {
   background-color: #0ec7ff;
 }
 .mosaic-tile {
-  margin:  39px 0px;
+  margin: 75px 0px;
+  margin-top: 39px;
 }
 
 .mosaic-tile:focus-within {
@@ -550,4 +551,12 @@ div.omni-clickable.OmniLinkItem.OmniLinkItem--Highlighted.OmniLinkItem {
 }
 .mosaic-root:focus-within {
   margin-bottom: -75px;
+}
+.panel-group .panel-collapse-guard {
+  display: flex;
+  flex: 1;
+  position: relative;
+  margin: 1px 0px;
+  margin-top: -34px;
+  contain: strict;
 }
