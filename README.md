@@ -4,7 +4,4 @@ Hello guys, I made a CSS design for Vivaldi. I try to design with the CSS file t
 Have fun with the CSS file (Design).
 
 What didn't work?
- 
--Bookmarks
-
 -Videos are buggy at full screen Mode.
