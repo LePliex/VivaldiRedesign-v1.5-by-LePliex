@@ -432,6 +432,7 @@ div.thumbnail-image.dial-folder-icon {
 }
 .color-behind-tabs-off .bookmark-bar button:focus {
  background-color: #0DEE9C !important;
+ border-radius: 4px;
 }
 color-behind-tabs-off .bookmark-bar button:hover {
   background-color: #0DEE9C !important;
