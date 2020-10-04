@@ -1,66 +1,91 @@
-#browser.win.win10 #header #titlebar .window-buttongroup button.window-minimize svg {
-  margin: auto;
-  color: lawngreen;
-  border-radius: 20px;
-  background: lawngreen;
-  pointer-events: visible;
+*{
+  color: white !important;
 }
-button.window-minimize > svg > path {
-  fill: transparent !important;
-}
-#browser.win.win10 #header #titlebar .window-buttongroup button.window-minimize svg:hover {
-  margin: auto;
-  color: #0DEE9C;
-  border-radius: 20px;
-  background: #0DEE9C;
-}
-#browser.win.win10.tabs-top #header #titlebar .window-buttongroup button:not(.vivaldi) {
-  height: 39px;
-    margin: 1px -9px;
-}
-svg.window-maximize {
-  pointer-events: visible;
-  background: yellow !important;
-    color: yellow !important;
-    border-radius: 20px !important;
-}
-svg.window-maximize:hover {
-  background: #D5D503 !important;
-    color: #D5D503 !important;
-    border-radius: 20px !important;
-}
-.theme-dark#browser.win.win10 .window-buttongroup button:hover{
-  background-color: transparent;
+g.window-maximize-glyph > path {
+  visibility: hidden !important;
 }
 .toolbar-statusbar {
-  background: var(--colorBg);
+background: #171b1f;
 color: var(--colorFg);
 height: 22px;
 box-shadow: inset 0 1px 0 0 var(--colorBorder);
 font-size: 11.5px;
-position: absolute;
+position: relative;
 width: 100%;
 bottom: 0px;
 margin: 0px 34px;
 padding-right: 32px;
 /* z-index: 1; */
 }
+button.window-maximize {
+  border: 2px solid greenyellow;
+  border-radius: 20px;
+}
+button.window-minimize > path {
+  visibility:  hidden !important;
+}
+button.window-close > path {
+  visibility:  hidden !important;
+}
+button.window-minimize > svg {
+  border: 2px solid yellow;
+  border-radius: 20px;
+}
+button.window-minimize > svg > path {
+  visibility: hidden !important;
+}
+g.window-restore-glyph > path {
+  visibility: hidden;
+}
+svg.window-maximize {
+  border: 2px solid greenyellow;
+  border-radius: 20px;
+}
+button.window-close > svg {
+  border: 2px solid red;
+  border-radius: 20px;
+}
+button.window-close > svg > path {
+  visibility: hidden !important; 
+}
+#browser.win.win10 #header #titlebar .window-buttongroup button.window-close:hover{
+  background-color: royalblue !important;
+  fill: white !important;
+}
+
 .UrlBar {
   width: 100%;
   padding: 0px 30px;
-  position: absolute;
+  position: relative;
   margin: 0 34px;
+  background: #394551 !important;
+  background-color: #394551 !important;
+}
+
+.tab-position .tab {
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: column;
+  overflow: hidden;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -webkit-user-drag: element;
+  background-color: rgb(23 27 31) !important;
 }
 div.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-noflex.toolbar-large {
   right: 30px !important;
       left: -30px !important;
 }
+.toolbar-mainbar {
+  background-color: #394551 !important;
+  background: #394551 !important;
+}
 .UrlBar-AddressField {
   background: none;
   border: none;
-  border-left: 2px solid red;
-  border-right: 2px solid red;
-  border-radius: 5px;
+  border-left: 2px solid white !important;
+  border-right: 2px solid white !important;
+  border-radius: 2px !important;
 }
 .UrlBar-AddressField:hover {
   border: none;
@@ -77,6 +102,7 @@ border-radius: 5px;
 }
 .theme-dark #switch button.webviewbtn img {
   background-color: transparent;
+  border-radius: 5px;
 }
 #modal-bg > div {
   border-radius: 20px;
@@ -88,11 +114,11 @@ border-radius: 5px;
   background-color: none;
 }
 .color-behind-tabs-off .toolbar-mainbar {
-  background: #394551;
+  background: #394551 !important;
 }
 #browser .tab-position .tab.active {
-  background: #394551;
-  background-color: #394551;
+  background: #394551 !important;
+  background-color: #394551 !important;
 }
 #panels-container.left #switch {
       background: #171B1F;
@@ -100,21 +126,6 @@ border-radius: 5px;
 }
 .theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg) {
   filter: none;
-}
-button.windows-maximize {
-  background: red;
-  fill: red;
-  border-radius: 20px;
-}
-@namespace xlink 'http://www.w3.org/2000/svg';
-svg image[xlink|href*="temp"] {
-    background: red;
-    fill: red;
-    border-radius: 20px;
-}
-#browser.win.win10 #header #titlebar .window-buttongroup button.window-close:hover {
-  background: transparent;
-  fill: red;
 }
 .sdwrapper .iconmenu-container.SearchField {
   border-radius: 20px;
@@ -127,7 +138,8 @@ background: transparent;
   bottom: 56px;
 }
 #panels .webpanel-stack {
-  top: 34px;
+  top: 56px;
+  margin-top: -22px;
 }
 div.button-toolbar.newtab:before {
   content: "+" !important;
@@ -153,36 +165,62 @@ div.button-toolbar.newtab > button {
  left: -14px !important;
  width: 45px !important;
 }
-button.window-close > svg {
-  pointer-events: visible;
-  background: #F2253A !important;
-  fill: #F2253A !important;
-  border-radius: 20px !important;
-}
-button.window-close > svg:hover {
-  background: red !important;
-  fill: red !important;
-  border-radius: 20px !important;
-}
-button.window-minimize {
-  pointer-events: none !important;
-}
-button.window-maximize {
-  pointer-events: none !important;
-}
-button.window-close {
-  pointer-events: none !important;
-}
-.color-behind-tabs-off .toolbar-mainbar{
-  height: 38px;
-}
 .dials .dial .thumbnail-image {
   border-radius: 20px;
 }
-div.button-toolbar.toggle-trash > button {
-  position: fixed !important;
-  right: 79px !important;
-  top: 1px !important;
+.startpage .startpage-drawer section.drawer-adddial {
+  max-width: 400px;
+  border-right: 1px solid #242424;
+  border-bottom: 10px solid #343434;
+  margin-bottom: -10px;
+  background-color: #343434;
+}
+.button-popup {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  width: var(--popupWidth);
+  max-height: 65vh;
+  margin-left: calc((var(--popupWidth) * -0.5) + var(--popupLeftOffset));
+  left: 50%;
+  color: #cdc8c0;
+  background-color: #343434;
+  box-shadow: 0 0 0 1px #242424, 0 2px 6px rgba(0, 0, 0, 0.25);
+  border-radius: var(--radiusHalf);
+}
+.button-popup h2 {
+  background-color: #2e2e2e;
+  border-top-left-radius: var(--radiusHalf);
+  border-top-right-radius: var(--radiusHalf);
+  border-bottom: 1px solid #242424;
+  padding: 6px 12px;
+  font-weight: 600;
+}
+#main .ContentBlocker-Field {
+  background-color: #343434;
+  padding: 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+}
+.startpage .startpage-drawer section.drawer-suggestions .dial-suggestions .dial .dial-image img {
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background-color: transparent;
+  border-radius: var(--radiusHalf);
+  cursor: pointer;
+  border: transparent;
+}
+div.NotesEditor.cardview {
+  background: #343434 !important;
+}
+.button-popup .button-popup-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #343434;
+  border-radius: var(--radiusHalf);
 }
 .startpage .startpage-drawer {
   height: 294px;
@@ -192,11 +230,11 @@ div.button-toolbar.toggle-trash > button {
   left: 50%;
   transform: translate(-50%, -50%);
   flex: 1;
-  border-top: 1px solid var( --colorBorder);
+  border-top: 1px solid #242424;
   position: absolute;
   transform-origin: 100% 0;
-  border-bottom: 10px solid var( --colorBg);
-  background-color: var( --colorBg);
+  border-bottom: 10px solid #2e2e2e;
+  background-color: #2e2e2e;
   margin-bottom: -10px;
   max-width: 100%;
 }
@@ -222,6 +260,9 @@ div.dial-columns {
     border-radius: 10px;
     cursor: pointer;
   }
+  .addwebpanel-wrapper .addwebpanelcallout {
+    background: #364259 !important;
+  }
   #panels-container.left .addwebpanel-wrapper .addwebpanelcallout {
     border-radius: 12px;
   }
@@ -242,7 +283,7 @@ div.dial-columns {
 }
 .speeddial .dial.add .thumbnail-image svg.add-speeddial-large-plus {
   align-self: center;
-  fill: var(--colorHighlightBg);
+  fill: var(--colorHighlightBg) !important;
   margin-top: 3px;
   width: 14px;
   height: 31px;
@@ -274,61 +315,11 @@ div.popup-scrollarea {
 div.button-popup-wrapper {
   border-radius: 12px !important;
 }
-
-#webview-container {
-  display: flex;
-  flex: 1;
-  position: absolute;
-  height: 100%;
-  margin: 0px 34px;
-  width: 100%;
-  color: var(--colorFg);
-  background-color: var(--colorBg);
-  padding-right: 34px;
-}
-
-#panels .webpanel-stack {
-    position: absolute !important;
-    display: flex !important;
-    flex: 1 !important;
-    width: 100% !important;
-    height: 100% !important;
-}
-#panels .webpanel-stack .webpanel .webpanel-content {
-    margin-top: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 41px 0px !important;
-    position: absolute !important;
-    overflow: hidden !important;
-}
 .thumbnail-image svg .folder-tab-color {
   visibility: hidden;
 }
-div.internal.webpageview {
- margin: 38px 0px !important;
-}
-/*
-div.active.visible.webpageview.pagefocusstop {
-  margin: 38px 0px !important;
-}
-*/
-#webview-container {
-  display: contents;
-}
 button.vivaldi {
   background:  #171b1f !important;
-}
-.toolbar-statusbar {
-  background: #171b1f;
-} 
-@media fullscreen and (min-width: 1920px) {
-  #webpage-stack {
-    margin: -38px 0px;
-  }
-}
-div#webpage-stack.resize {
-  margin-bottom: -16px;
 }
 div.ignore-react-onclickoutside.OmniDropdown {
   border-bottom-right-radius: 5px;
@@ -339,23 +330,24 @@ div.ignore-react-onclickoutside.OmniDropdown {
   margin-right: -2px;
   padding:12px 0px;
   max-width: none;
-  border: 2px solid cyan;
+  border: 2px solid cyan !important;
   background: #394551;
   color: white;
-  border-top: none;
+  border-top: none !important;
 }
 .SearchField:focus-within, .UrlBar-AddressField:focus-within {
-  border-color: cyan;
-  border: 2px solid cyan;
+  border-color: cyan !important;
+  border: 2px solid cyan !important;
   box-shadow: none;
   background-color: #394551;
 }
 button.addwebpanel.panelbtn:hover {
   border-radius: 20px;
-  box-shadow: inset -1px 0 0 0 cyan;
-  background-color: cyan;
+  box-shadow: inset -1px 0 0 0 cyan !important;
+  background-color: cyan !important;
   border-radius: 20px;
   color: white;
+  box-shadow: none !important;
   animation: SidebarPanelAddButtonAnimation .8s;
 }
 
@@ -370,7 +362,7 @@ button.addwebpanel.panelbtn:hover {
 }
 input.address {
   border-radius: 20px;
-  outline: cyan;
+  outline: cyan !important;
 }
 .theme-dark .addwebpanel-wrapper button img, .theme-dark .addwebpanel-wrapper button svg {
   border-radius: 20px;
@@ -397,6 +389,12 @@ h1 {
 #panels-container.left .addwebpanel-wrapper .addwebpanelcallout {
   animation: leftfade 800ms cubic-bezier(0.2, 0.9, 0.6, 1);
 }
+#browser, #browser ~ div {
+  background: #171b1f;
+}
+.address-top .toolbar-mainbar:after {
+  visibility: hidden;
+}
 .bookmark-bar {
   display: flex;
   flex: 0 0 auto;
@@ -406,41 +404,67 @@ h1 {
   border: 0 solid var(--colorAccentBgDarker);
   position: relative;
   background-color: var(--colorAccentBgDark);
-  top: 38px;
   margin: 0px 34px;
   margin-right: 0px;
   color: var(--colorAccentFg);
-  fill: var(--colorAccentBg);
   stroke: var(--colorAccentFgFaded);
   --yield: 60px;
 }
-#main {
-  position: relative;
-  flex-direction: column;
-  z-index: 0;
-  background: #171b1f;
+div.thumbnail-image.dial-folder-icon {
+  border: 2px solid var(--colorBgLightIntense) !important;
+  box-shadow: none !important;
 }
-#main > .inner {
-  display: flex;
-  flex: 1 1 0;
-  position: unset;
-  overflow: hidden;
-  padding: 39px 0px;
+.bookmark-bar button img, .bookmark-bar button svg {
+  fill: white !important;
 }
-.address-top .toolbar-mainbar:after {
-  visibility: hidden;
+.color-behind-tabs-on .bookmark-bar button{
+  background-color: #394551 !important;
+  background: #394551 !important;
 }
 .bookmark-bar {
-  background-color: #394551;
+  background-color: #394551 !important;
 }
 .color-behind-tabs-off .bookmark-bar button {
-  background-color: #394551;
+  background-color: #394551 !important;
+}
+.color-behind-tabs-off:hover .bookmark-bar button:hover {
+  cursor: pointer;
+}
+.color-behind-tabs-off .bookmark-bar button:focus {
+ background-color: #0DEE9C !important;
+}
+color-behind-tabs-off .bookmark-bar button:hover {
+  background-color: #0DEE9C !important;
+ }
+button.bookmarkbarItem.folder:hover:not-focused {
+  background-color: #0DEE9C !important;
+}
+button.uifocusstop.bookmarkbarItem.folder:not:hover {
+  background-color: transparent !important;
+}
+button.bookmarkbarItem.folder:not:hover {
+  background-color: transparent !important;
+}
+#browser.break-mode .bookmarkbarItem {
+  visibility: hidden;
+}
+.bookmark-bar-top .bookmark-bar {
+  border-bottom: none;
+}
+/*
+.color-behind-tabs-off .bookmark-bar button:focus {
+  background-color: #0DEE9C !important;
+ }
+ */
+.vivaldi-settings .settings-content {
+  background-color: #343434 !important;
+  background: #343434 !important;
 }
 #switch .addwebpanel-wrapper > button.active, #switch > button.active {
   background-color: #0ec7ff;
   transform: scale(0.8);
   color: white;
-  fill: white;
+  fill: white !important;
   border-radius: 8px;
   border-color: var(--colorBorder);
   position: relative;
@@ -450,6 +474,11 @@ h1 {
 }
 div.toolbar.toolbar-default.toolbar-wrap > input  {
   border-radius: 20px !important;
+}
+div.toolbar.toolbar-default.toolbar-wrap > input:focus-within {
+  box-shadow: none;
+  border: 2px solid #0DEE9C !important;
+  background: #262626 !important;
 }
 div.toolbar.toolbar-default.toolbar-wrap > select  {
   border-radius: 20px !important;
@@ -483,21 +512,6 @@ div.button-toolbar:nth-child(2) > button {
   border: none;
   background: none;
 }
-div.button-toolbar:nth-child(3) > button:hover {  
-  border-radius: 20px;
-}
-div.button-toolbar:nth-child(2) > button:hover {  
-  border-radius: 20px;
-}
-
-div.button-toolbar:nth-child(3) > button:hover {  
-  background: #0ec7ff;
-  animation: blueani .8s;
-}
-div.button-toolbar:nth-child(2) > button:hover {  
-  background: #0ec7ff;
-  animation: blueani .8s;
-}
 @keyframes blueani {
   from{opacity: 0;}
   to{opacity: 1;}
@@ -518,45 +532,202 @@ div.omni-clickable.OmniLinkItem.OmniLinkItem--Highlighted.OmniLinkItem--SingleVa
 div.omni-clickable.OmniLinkItem.OmniLinkItem--Highlighted.OmniLinkItem {
   background-color: #0ec7ff;
 }
-.mosaic-tile {
-  margin: 75px 0px;
-  margin-top: 39px;
-}
-
-.mosaic-tile:focus-within {
-  bottom: 3.6% !important;
-  margin: 39px 0px !important;
-}
 .button-popup-arrow--above:before {
   visibility: hidden;
 }
 .HUD {
   border-radius: 20px;
 }
-#browser.break-mode .bookmarkbarItem {
-  visibility: hidden;
-}
-.bookmark-bar-top .bookmark-bar {
-  border-bottom: none;
-}
-.webpageview.internal.visible .internal-page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-.mosaic-root {
-  margin: -39px 0px;
-}
-.mosaic-root:focus-within {
-  margin-bottom: -75px;
-}
+
 .panel-group .panel-collapse-guard {
   display: flex;
   flex: 1;
   position: relative;
-  margin: 1px 0px;
   margin-top: -34px;
   contain: strict;
+  background-color: #343434 !important;
+  margin-bottom: 0;
+}
+.panel#downloads .download-editor .data {
+  display: flex;
+  flex-direction: column;
+  background: #262626;
+  flex: 1;
+  max-width: 100%;
+}
+div.dial.add > button.thumbnail-image {
+    position: absolute !important;
+    height: 51px !important;
+    background: #202020 !important;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 0px 1px, rgba(0, 0, 0, 0.12) -3.05px 3px 3px !important;
+}
+button.vivaldi:hover {
+  transition: .35s !important;
+  background: #ef3939 !important;
+}
+#browser.color-behind-tabs-on, #browser ~ div.color-behind-tabs-on {
+  background: #171b1f !important;
+  color: #fff !important;
+}
+#switch .addwebpanel-wrapper > button svg, #switch > button svg {
+  fill: #d6d6d6 !important;
+}
+header.settings-navigation-header > input.settings-search {
+  border-radius: 20px;
+}
+div.setting-group > div.setting-single > div > p > input[type = "button"] {
+  border-radius: 20px !important;
+}
+input {
+  border-radius: 20px;
+}
+.selectbox .selectbox-image .theme-preview, .selectbox .selectbox-image .tab-preview {
+  border-radius: 7px;
+}
+select:not([multiple]):not([size]), input[type=date] {
+  border-radius: 20px;
+}
+.vivaldi-settings .setting-single input[type='text']:first-child:last-child {
+  border-radius: 20px;
+}
+#app .floating-label .floating-input {
+  border-radius: 20px;
+}
+.selectbox.selectbox-selected .selectbox-image {
+  box-shadow: 0 0 0 1px var(--colorHighlightBg);
+  border-radius: 6px;
+}
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+  border-top-color: var(--colorBorder);
+  border-bottom-color: var(--colorBorder);
+  background-color: transparent;
+  fill: #0DEE9C !important;
+  color: #0DEE9C !important;
+  border-radius: 20px;
+  border: 2px solid;
+  margin-right: 0;
+}
+.vivaldi-settings .settings-sidebar .settings-navigation:focus-within .tree-row[data-selected] .button-category:not(:active){
+  border-top-color: var(--colorBorder);
+  border-bottom-color: var(--colorBorder);
+  background-color: transparent;
+  fill: #0DEE9C !important;
+  color: #0DEE9C !important;
+  border-radius: 20px;
+  border: 2px solid;
+  margin-right: 0;
+  box-shadow: none;
+}
+.settings-startpage .selectbox-image {
+  border-radius: 6px;
+}
+.settings-startpage .selectbox-image {
+  border-radius: 15px;
+}
+.master-detail {
+  display: flex;
+  border-radius: 15px;
+  border: 2px solid red;
+}
+.master-detail .master-items {
+  border-radius: 15px;
+}
+.master-detail .master-toolbar .button-toolbar:nth-child(1) {
+  border-bottom-left-radius: 15px;
+  background-color: ;
+}
+.master-detail .master-toolbar .button-toolbar:nth-last-child() {
+  border-bottom-right-raidus: 15px;
+}
+.master-detail .master-toolbar {
+  border-bottom-left-radius: 15px;
+}
+.vivaldi-settings .settings-sidebar .button-category:hover {
+  cursor: pointer;
+}
+.vivaldi-settings .settings-sidebar .button-category {
+  color: white !important;
+  fill: white !important;
+}
+.vivaldi-settings .settings-sidebar {
+  background-color: #171817 !important;
+}
+.Experiments {
+  background:color #2e2e2e !important;
+}
+.dials .dial .button-title {
+  background: #262626 !important;
+  color: #cdc8c0 !important;
+}
+.sdwrapper .iconmenu-container.SearchField {
+  background: #262626 !important;
+
+}
+select:not([multiple]):not([size]), input[type=date] {
+  background-image: linear-gradient(55deg, #262626 43%, #00000000 45%), linear-gradient(125deg, transparent 53%, #262626 55%), linear-gradient(180deg, #262626 30%, #cdc8c0 30%);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right 4px;
+  background-color: #262626;
+}
+input, select, textarea {
+  background-color: #262626;
+  color: #cdc8c0;
+}
+input[type=button], input[type=submit], input[type=color], .FormButton, .webpage-button {
+  height: 28px;
+  padding: 0 18px;
+  -webkit-user-select: none;
+  color: var(--colorFg);
+  fill: currentColor;
+  background-image: linear-gradient(#343434 0%, #2e2e2e 100%);
+}
+.vivaldi-settings {
+  background-color: #2e2e2e;
+  color: #cdc8c0;
+  display: flex;
+  flex: 1;
+  position: relative;
+  box-shadow: 0 -1px #242424;
+  max-width: 100%;
+}
+.master-detail .master-items {
+  flex: 1;
+  overflow: auto;
+  background-image: linear-gradient(180deg, rgb(46 46 46 / 0.8) 0, rgb(46 46 46 / 0.8) 50%, transparent 50%, transparent 100%);
+  background-size: 100% 56px;
+  background-attachment: local;
+  background-repeat: repeat-y;
+}
+.master-detail .master-toolbar {
+  border-top: 1px solid #242424;
+  background-color: #343434;
+  display: flex;
+  height: 20px;
+}
+.theme-schedule-timeline .theme-schedule-timeslice .timeslice-bubble {
+  position: absolute;
+  cursor: col-resize;
+  width: 50px;
+  background-color: #343434;
+  border: 1px solid #242424;
+  text-align: center;
+  font-weight: 500;
+  margin-left: -25px;
+  left: 0;
+  padding: 3px 0;
+  bottom: 40px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+.master-detail .master-toolbar .button-toolbar {
+  background-color: #343434;
+  border-width: 0;
+  border-right-width: 1px;
+  display: flex;
+  width: 30px;
+  height: 19px;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
 }
