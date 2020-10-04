@@ -4,7 +4,7 @@ Hello guys, I made a CSS design for Vivaldi. I try to design with the CSS file t
 
   In which version works the theme?
  
- A.: 3.3.2022.47 (Stable channel) (64-bit) [Created by a windows PC]
+ A.: 3.3.2022.47 (Stable channel) (64-bit) [Created by a Windows PC]
 
   What is buggy/ not settable?
 
