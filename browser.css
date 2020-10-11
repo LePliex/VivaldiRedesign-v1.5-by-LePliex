@@ -1087,3 +1087,6 @@ div.vivaldi-tree.no-selection::after {
 .startpage .history .history-view {
   background: #202020;
 }
+.vivaldi-tree-empty {
+  background-color: #202020 !important:
+}
