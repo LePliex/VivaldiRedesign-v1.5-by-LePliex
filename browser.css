@@ -947,7 +947,7 @@ div.view.range::-webkit-scrollbar-thumb:hover {
     border-color: transparent !important;
     visibility: hidden;
 }
-div.history-tree > div.vivaldi-tree > div.ReactVirtualized__Grid.ReactVirtualized__List > div.ReactVirtualized__Grid__innerScrollContainer {
+ {
     margin-top: 29px !important;
     left: 135px;
     margin-right: 620px !important;
@@ -1089,4 +1089,7 @@ div.vivaldi-tree.no-selection::after {
 }
 .vivaldi-tree-empty {
   background-color: #202020 !important:
+}
+.startpage .history .more-info .moreinfo-activity-labels li span, .startpage .history .more-info .moreinfo-link-labels li span {
+  border-radius: 20px;
 }
