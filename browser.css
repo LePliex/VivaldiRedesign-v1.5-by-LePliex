@@ -870,8 +870,16 @@ div.button-toolbar > button > img[src="data:image/png;base64,iVBORw0KGgoAAAANSUh
   border-radius: 7px !important;
 }
 .startpage .history .more-info .moreinfo-stats {
-  border-radius: 20px;
-border: 2px solid red;
+    border-radius: 20px;
+    border: 2px solid red;
+    position: relative;
+    top: -28px;
+}
+.startpage .history .more-info .header {
+    flex: 0 0 auto;
+    padding: 12px 12px 6px;
+    position: relative;
+    top: -27px;
 }
 .win h1 {
   text-align: center;
@@ -941,14 +949,14 @@ div.view.range::-webkit-scrollbar-thumb:hover {
 }
 div.history-tree > div.vivaldi-tree > div.ReactVirtualized__Grid.ReactVirtualized__List > div.ReactVirtualized__Grid__innerScrollContainer {
     margin-top: 29px !important;
-    left: 135px !important;
+    left: 135px;
     margin-right: 620px !important;
     width: 63% !important;
     position: absolute !important;
     background: #202020 !important;
     border: 2px solid #606060 !important;
     border-radius: 20px !important;
-    margin-left: 205px !important;
+    margin-left: -77px;
 }
 .history .vivaldi-tree .tree-row.folder, #history-panel .vivaldi-tree .tree-row.folder {
     grid-template-columns: 1fr;
@@ -974,9 +982,13 @@ cursor: pointer;
 .startpage .history .manager-content .history-tree {
   background: #202020 !important;
 }
+.startpage .history .manager-content {
+  position: relative;
+  left: 281px;
+}
 .startpage .history .calendar.manager .rbc-row, .startpage .history .history-calendar-container ~ .manager-editor {
     border-width: 1px 0 0 1px;
-    padding: 45px 4px;
+    padding: 78px 4px;
     background: #202020;
 }
 .startpage .history .manager-content .vivaldi-tree .tree-row.folder label, .startpage .history .sortselector.sortselector-tableheader.folder label {
