@@ -356,14 +356,14 @@ div.ignore-react-onclickoutside.OmniDropdown::-webkit-scrollbar-thumb:hover {
   border: 2px solid cyan !important;
   box-shadow: none;
   border-radius: 4px !important;
-  background-color: #394551;
+  background-color: #394551 !important;
 }
 .UrlBar-SearchField {
   background: #394551;
   border-left: none;
     border-top: none;
     border-bottom: none;
-    border-right: 2px solid;
+    border-right: 2px solid !important;
 }
 .UrlBar-AddressField {
   background: none;
@@ -376,11 +376,15 @@ div.ignore-react-onclickoutside.OmniDropdown::-webkit-scrollbar-thumb:hover {
 background: #2C343C;
 border-radius: 2px;
 }
-.UrlBar-SearchField:focus {
+.UrlBar-SearchField:focus-within {
   border-radius: 2px;
+  backgorund: #394551 !important;
 }
-.UrlBar-SearchField:focus:hover {
-  background: #394551;
+.UrlBar-SearchField:focus-within:hover {
+  background: #394551 !important;
+}
+.UrlBar-SearchField {
+  border-radius: 2px !important;
 }
 button.addwebpanel.panelbtn:hover {
   border-radius: 20px !important;
@@ -1058,5 +1062,11 @@ div.Cal__Container_wrapper {
   background: #202020 !important;
 }
 div.vivaldi-tree.no-selection::after {
+  visibility: hidden;
+}
+.tabs-top .tab.active:not(.marked):not(.tab-mini):before, .tabs-bottom .tab.active:not(.marked):not(.tab-mini):before {
+  visibility: hidden;
+}
+.tabs-top .tab.active:not(.marked):not(.tab-mini):after {
   visibility: hidden;
 }
