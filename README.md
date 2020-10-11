@@ -7,8 +7,8 @@ Hello guys, I made a CSS design for Vivaldi. I try to design with the CSS file t
  A.: 3.3.2022.47 (Stable channel) (64-bit) [Created by a Windows PC]
 
   What is buggy/ not settable?
-
-- setting the Corner rounding (it ruin the Address-bar)
+  
+  - nothing (I found no errors)
 
 Version 1.3
 
@@ -24,3 +24,4 @@ Version 1.3
 - added more pointer cursor
 - more rounded the address-bar
 - fixed Search field (where the search engines are)
+- fixed address-bar rounding
