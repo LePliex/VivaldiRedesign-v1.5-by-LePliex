@@ -1084,3 +1084,6 @@ div.vivaldi-tree.no-selection::after {
 .tabs-top .tab.active:not(.marked):not(.tab-mini):after {
   visibility: hidden;
 }
+.startpage .history .history-view {
+  background: #202020;
+}
