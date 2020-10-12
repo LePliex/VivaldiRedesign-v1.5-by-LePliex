@@ -947,16 +947,16 @@ div.view.range::-webkit-scrollbar-thumb:hover {
     border-color: transparent !important;
     visibility: hidden;
 }
- div.history-tree > div.vivaldi-tree.no-selection > div.ReactVirtualized__Grid.ReactVirtualized__List > div.ReactVirtualized__Grid__innerScrollContainer {
+div.history-tree > div.vivaldi-tree > div.ReactVirtualized__Grid.ReactVirtualized__List > div.ReactVirtualized__Grid__innerScrollContainer {
     margin-top: 29px !important;
-    left: 135px;
+    left: 135px !important;
     margin-right: 620px !important;
     width: 63% !important;
     position: absolute !important;
     background: #202020 !important;
     border: 2px solid #606060 !important;
     border-radius: 20px !important;
-    margin-left: -77px;
+    margin-left: -77px !important;
 }
 .history .vivaldi-tree .tree-row.folder, #history-panel .vivaldi-tree .tree-row.folder {
     grid-template-columns: 1fr;
