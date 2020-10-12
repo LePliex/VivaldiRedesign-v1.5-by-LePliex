@@ -1088,7 +1088,8 @@ div.vivaldi-tree.no-selection::after {
   background: #202020;
 }
 .vivaldi-tree-empty {
-  background-color: #202020 !important:
+      /* background-color: var(--colorBgLightIntense); */
+      background: #202020 !important;
 }
 .startpage .history .more-info .moreinfo-activity-labels li span, .startpage .history .more-info .moreinfo-link-labels li span {
   border-radius: 20px;
