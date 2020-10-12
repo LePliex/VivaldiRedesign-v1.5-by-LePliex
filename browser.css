@@ -947,7 +947,7 @@ div.view.range::-webkit-scrollbar-thumb:hover {
     border-color: transparent !important;
     visibility: hidden;
 }
- {
+ div.history-tree > div.vivaldi-tree.no-selection > div.ReactVirtualized__Grid.ReactVirtualized__List > div.ReactVirtualized__Grid__innerScrollContainer {
     margin-top: 29px !important;
     left: 135px;
     margin-right: 620px !important;
