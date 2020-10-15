@@ -114,6 +114,7 @@ background-color: transparent !important;
 div.button-toolbar.ExtensionDropdownIcon.extensionId > button:hover {
   border-radius: 20px !important;
   background-color: cyan !important;
+  transform: scale(0.9);
 }
 div.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large > div.button-toolbar:hover {
   background: #29333e;
@@ -127,6 +128,7 @@ div.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large > div.button-toolba
 div.toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large > div.button-toolbar:hover {
   border-radius: 20px;
   background-color: cyan !important;
+  transform: scale(0.8);
 }
 .StartPage-GameButton {
     position: absolute;
