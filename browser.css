@@ -108,7 +108,8 @@ background-color: transparent !important;
   div.toolbar.toolbar-mainbar.toolbar-wrap {
     border: 2px solid white !important;
     border-radius: 12px !important;
-    left: -209px !important;
+    left: -147px !important;
+    height: 111px;
     margin-left: 262px !important;
 }
 div.button-toolbar.ExtensionDropdownIcon.extensionId > button:hover {
@@ -125,9 +126,35 @@ div.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large > div.button-toolba
     background-color: transparent;
     background: none !important;
 }
+#browser .find-in-page input, #browser .find-in-page button {
+    border-radius: 20px;
+}
+.find-in-page {
+  background-color: #394551;
+}
 div.toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large > div.button-toolbar:hover {
   border-radius: 20px;
   background-color: cyan !important;
+}
+.startpage .startpage-drawer section.drawer-adddial .drawer-addform .add-dial-submit {
+    flex: 0 0 auto;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    background: none;
+    left: 3px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.startpage .startpage-drawer section.drawer-adddial .drawer-addform .add-dial-submit:hover {
+  transition: 0.8s;
+  background: cyan;
+  cursor: pointer;
+}
+.thumbnail-image::after {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .StartPage-GameButton {
     position: absolute;
@@ -136,6 +163,12 @@ div.toolbar.toolbar-mainbar.toolbar-extensions.toolbar-large > div.button-toolba
     background: #252525;
     right: 48px;
     border-radius: 50px;
+}
+div.dial.add > button.thumbnail-image:hover {
+  cursor: pointer;
+}
+div.thumbnail-image.dial-folder-icon:hover {
+  cursor: pointer;
 }
 .UrlBar-AddressField {
   background: none;
@@ -215,6 +248,7 @@ div.button-toolbar.newtab:before {
 }
 div.button-toolbar.newtab {
   fill: transparent !important;
+  width: 30px !important;
 }
 div.button-toolbar.newtab:hover {
   transition: 0.3s;
@@ -222,7 +256,7 @@ div.button-toolbar.newtab:hover {
   border-radius: 4px !important;
 }
 div.button-toolbar.newtab > button {
- position: absolute;
+ position: relative;
  left: 1px !important;
  height: 0px !important;
  top: 1px !important;
@@ -252,8 +286,24 @@ div.button-toolbar.newtab > button {
   box-shadow: 0 0 0 1px #242424, 0 2px 6px rgba(0, 0, 0, 0.25);
   border-radius: var(--radiusHalf);
 }
-div.button-popup.button-popup-left.button-popup-above.button-popup-arrow-dark.button-popup-enter-done {
+.button-popup-right.button-popup-above {
+  position: absolute;
+  left: 80px;
+}
+div.ClockPopup.button-popup.button-popup-left.button-popup-above.button-popup-arrow-dark.button-popup-enter-done {
+left: -52px !important;
+}
+.StartPage-GameButton .GameButton > button.button-pressed > div.button-popup.button-popup-left.button-popup-above.button-popup-arrow-dark.button-popup-enter-done {
   left: 0px !important;
+}
+
+div.button-popup.button-popup-left.button-popup-above.button-popup-arrow-dark.button-popup-enter-done {
+  left: 10px;
+}
+@media screen and (max-width: 1164px) {
+  div.button-popup.button-popup-left.button-popup-above.button-popup-arrow-dark.button-popup-enter-done {
+    left: -7px;
+  }
 }
 .button-popup-below.button-popup-arrow-dark:before {
   visibility: hidden;
@@ -278,6 +328,8 @@ button.GamePreviewPopup-StartButton.FormButton.primary {
   padding: 0 12px 12px;
   display: flex;
   flex-direction: column;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .startpage .startpage-drawer section.drawer-suggestions .dial-suggestions .dial .dial-image img {
   width: 36px;
@@ -355,18 +407,42 @@ button.close {
   transform: scale(0.8);
   align-items: unset;
 }
+.startpage .history .manager-content .week .week-day {
+  transform: scale(0.9);
+    border: 2px solid red;
+    border-radius: 20px;
+    background: #202020;
+}
+.startpage .history .manager-content .month .month-calendar {
+    transform: scale(0.9);
+}
+.startpage .history .manager-content .month {
+  background: #202020;
+}
+.ClockPopup-Header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.startpage .history .manager-content .week .week-day:not(:last-child) > header {
+  text-align: center;
+}
 .speeddial .dial.add .thumbnail-image svg.add-speeddial-large-plus {
-  align-self: center;
-  fill: var(--colorHighlightBg) !important;
-  margin-top: 3px;
-  width: 14px;
-  height: 31px;
-  transition: transform 500ms cubic-bezier(0.8, -0.3, 0.15, 1.3);
+    align-self: center;
+    fill: var(--colorHighlightBg) !important;
+    margin-top: 0px;
+    left: -80px;
+    width: 14px;
+    height: 31px;
+    transition: transform 500ms cubic-bezier(0.8, -0.3, 0.15, 1.3);
 }
 svg.add-speeddial-large-plus {
   position: relative;
   left: -50px;
   top: 0px;
+}
+.startpage .startpage-drawer section.drawer-adddial .drawer-addform input.address {
+    margin: 0px -63px 6px 0;
+    flex: 1 1 100%;
 }
 button-popup.button-popup-arrow.button-popup-arrow--dark.button-popup-arrow--below button-popup-enter-done {
  border-radius: 20px !important;
@@ -451,7 +527,6 @@ border-radius: 2px;
 }
 .UrlBar-SearchField:focus-within {
   border-radius: 2px;
-  backgorund: #394551 !important;
 }
 .UrlBar-SearchField:focus-within:hover {
   background: #394551 !important;
@@ -760,21 +835,8 @@ select:not([multiple]):not([size]), input[type=date] {
 }
 .master-detail {
   display: flex;
-  border-radius: 15px;
+  border-radius: 5px;
   border: 2px solid red;
-}
-.master-detail .master-items {
-  border-radius: 15px;
-}
-.master-detail .master-toolbar .button-toolbar:nth-child(1) {
-  border-bottom-left-radius: 15px;
-  background-color: ;
-}
-.master-detail .master-toolbar .button-toolbar:nth-last-child() {
-  border-bottom-right-raidus: 15px;
-}
-.master-detail .master-toolbar {
-  border-bottom-left-radius: 15px;
 }
 .vivaldi-settings .settings-sidebar .button-category:hover {
   cursor: pointer;
@@ -815,6 +877,7 @@ input[type=button], input[type=submit], input[type=color], .FormButton, .webpage
   color: var(--colorFg);
   fill: currentColor;
   background-image: linear-gradient(#343434 0%, #2e2e2e 100%);
+  border-radius: 20px !important;
 }
 .vivaldi-settings {
   background-color: #2e2e2e;
@@ -896,7 +959,6 @@ border-radius: 20px;
     position: absolute;
     text-align: center;
     align-items: center;
-    r: center;
     top: 30px;
     left: -85px;
     margin-top: 28px;
@@ -908,7 +970,7 @@ border-radius: 20px;
     text-overflow: ellipsis;
     color: var(--colorFg);
     font-size: 16px;
-    text-align: center;
+    justify-content: center;
     position: absolute;
     font-size: 12px;
     bottom: 12px;
@@ -1164,4 +1226,81 @@ div.vivaldi-tree.no-selection::after {
 }
 .startpage .history .more-info .moreinfo-activity-labels li span, .startpage .history .more-info .moreinfo-link-labels li span {
   border-radius: 20px;
+}
+.button-popup-left.button-popup-below {
+  left: -47px !important;
+}
+.tabswitcher .visual-tabs .visual-tab .visual-tab-favicon-container .visual-tab-favicon > svg {
+  margin-top: 0px !important;
+}
+div#tabs-subcontainer.top.visible {
+  background: #171b1f !important;
+  margin-left: 33px !important;
+}
+.toolbar-default .button-toolbar > button:enabled {
+  background-image: none;
+}
+.toolbar-default .button-toolbar > button:enabled.button-pressed {
+  background-image: none;
+}
+div.button-toolbar.button-narrow[title="Previous"] > button {
+  background-color: transparent;
+}
+div.button-toolbar.button-narrow[title="Next"] > button {
+  background-color: transparent;
+}
+button:disabled {
+  background-color: transparent !important;
+}
+div.fieldset > input {
+  border-radius: 20px !important;
+}
+div.preview {
+  border-radius: 10px !important;
+}
+div.fieldset.resizable > textarea.description {
+  border-radius: 10px !important;
+}
+input.ClockPopup-SavePreset {
+  border-radius: 20px !important;
+}
+input.ClockPopup-Start {
+  border-radius: 20px !important;
+}
+input.ClockPopup-Name {
+  border-radius: 6px !important;
+}
+
+.ClockPopup h3 {
+  visibility: hidden !important;
+}
+input.dateInputHidden {
+  border-radius: 6px !important;
+}
+div.week-container {
+  background-color: #202020 !important;
+}
+.ContentBlocker-Control {
+  fill: lime !important;
+}
+div.SiteInfoButton-SecurityBadge > svg > path {
+  fill: lime !important;
+}
+div.SiteInfoButton-SecurityBadge > svg > path[d=" path(M 10.4 5 c -0.4 -0.8 0 -1.8 1 -2 c 0.7 0 1.5 0.4 1.6 1.2 a 1.4 1.4 0 0 1 -0.2 1 l -4 7 c -0.3 0.5 -0.7 0.8 -1.2 0.8 c -0.6 0 -1 -0.2 -1.3 -0.7 L 3.8 7.8 L 2.2 5 c -0.5 -0.8 0 -2 1 -2 c 0.7 0 1 0.2 1.4 0.7 l 1 2 l 1 1.4 a 2 2 0 0 0 1.7 1.5 a 2.2 2.2 0 0 0 2.3 -2 V 6 c 0 -0.3 0 -0.6 -0.2 -1 Z)"] {
+  fill: white !important;
+}
+.create-qr-code button svg {
+  fill: white !important;
+}
+.button-on .bookmark-animated-fill {
+  fill: white !important;
+}
+.sdwrapper {
+  position: unset !important;
+}
+.SiteInfoButton .siteinfo-text {
+  color: red !important;
+}
+span.OmniLinkItem-EraseButton:hover > svg > path {
+  color: red !important;
 }
