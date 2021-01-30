@@ -1,15 +1,32 @@
-# VivaldiRedesign-v1.4-by-LePliex
+# VivaldiRedesign-v1.5-by-LePliex
 
 Hello guys, I made a CSS design for Vivaldi. I try to design with the CSS file the browser so possible modern. If you have suggestions, then write it in the comments.
 
   In which version works the theme?
  
- A.: 3.4.2066.76 (Stable channel) (64-bit) [Created by a Windows PC]
+ A.: 3.6.2165.34 (Stable channel) (64-bit) [Created by a Windows PC]
 
   What is buggy/ not settable?
   
   - nothing (I found no errors)
   
+Changes (from v.1.5)
+=
+
+- made ready for the version 3.6
+- fixed Vivaldia Game window at Start page
+- fixed break and clock window.
+- fixed bookmark site + input & picture preview rounded.
+- fixed extension window
+- fixed account-dialog
+- fixed new-tabs stacks
+
+- Lock icon dyed green
+- unsecure site text dyed red
+- Block shield & vivaldi icon dyed green (at the adressbar)
+- (vivaldi://history) category: week & month redesigned
+- redesigned disabled buttons 
+- redesigned at adressbar => Dropdownmenu , the erearse button to red (in hovermode)
 
 Changes (from v1.4)
 =
