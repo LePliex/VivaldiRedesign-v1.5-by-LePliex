@@ -8,6 +8,6 @@ Tutorial
 5. Scroll down until you see: "CUSTOM UI MODIFICATIONS"
 6. Then you should before you click "Select Folder", create a folder where the CSS File is.
 7. Select the Folder where the CSS file is in.
-8. Restart the browser.
+8. Restart the browser. 
 
 End: finished.
